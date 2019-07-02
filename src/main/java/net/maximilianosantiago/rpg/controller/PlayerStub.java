@@ -9,7 +9,7 @@ import net.maximilianosantiago.rpg.model.Player;
 
 public class PlayerStub {
 	private static Map<Long, Player> players = new HashMap<Long, Player>();
-	private static Long idIndex = 3L;
+	private static Long idIndex = 5L;
 
 	//populate initial wrecks
 	static {
@@ -22,7 +22,7 @@ public class PlayerStub {
 		Player d = new Player(4L, "Pedro");
 		players.put(4L, d);
 		Player e = new Player(5L, "Janio");
-		players.put(5L, d);
+		players.put(5L, e);
 	}
 
 	public static List<Player> list() {

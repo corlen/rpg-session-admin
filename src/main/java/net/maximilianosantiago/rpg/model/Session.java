@@ -7,13 +7,13 @@ public class Session {
 	Long id;
 	String description;
 	Date createdDate;
-	Date closeDate;
 	
-	public Session(Long id, String description, Date createdDate, Date closeDate) {
+	public Session() { }
+	
+	public Session(Long id, String description, Date createdDate) {
 		this.id = id;
 		this.description = description;
 		this.createdDate = createdDate;
-		this.closeDate = closeDate;
 	}
 
 	public Long getId() {
@@ -39,13 +39,4 @@ public class Session {
 	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
 	}
-
-	public Date getCloseDate() {
-		return closeDate;
-	}
-
-	public void setCloseDate(Date closeDate) {
-		this.closeDate = closeDate;
-	}
-	
 }

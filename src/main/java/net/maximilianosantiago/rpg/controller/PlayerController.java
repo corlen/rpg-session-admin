@@ -20,8 +20,8 @@ public class PlayerController {
 	}
 
 	@RequestMapping(value = "players", method = RequestMethod.POST)
-	public Player create(@RequestBody Player Player) {
-		return PlayerStub.create(Player);
+	public Player create(@RequestBody Player player) {
+		return PlayerStub.create(player);
 	}
 
 	@RequestMapping(value = "players/{id}", method = RequestMethod.GET)
@@ -30,8 +30,8 @@ public class PlayerController {
 	}
 
 	@RequestMapping(value = "players/{id}", method = RequestMethod.PUT)
-	public Player update(@PathVariable Long id, @RequestBody Player Player) {
-		return PlayerStub.update(id, Player);
+	public Player update(@PathVariable Long id, @RequestBody Player player) {
+		return PlayerStub.update(id, player);
 	}
 
 	@RequestMapping(value = "players/{id}", method = RequestMethod.DELETE)
