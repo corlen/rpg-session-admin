@@ -9,9 +9,12 @@ public class Roll {
 	Long playerId;
 	Long sessionId;
 	Integer sum;
+	Long dateRolled;
+	
+	public Roll() { }
 	
 	public Roll(Long id, Integer dieFace, Integer quantity, Integer bonusIncrement, Long playerId, Long sessionId,
-			Integer sum) {
+			Integer sum, Long dateRolled) {
 		this.id = id;
 		this.dieFace = dieFace;
 		this.quantity = quantity;
@@ -19,6 +22,7 @@ public class Roll {
 		this.playerId = playerId;
 		this.sessionId = sessionId;
 		this.sum = sum;
+		this.dateRolled = dateRolled;
 	}
 	
 	public Long getId() {
@@ -62,6 +66,12 @@ public class Roll {
 	}
 	public void setSum(Integer sum) {
 		this.sum = sum;
+	}
+	public Long getDateRolled() {
+		return dateRolled;
+	}
+	public void setDateRolled(Long dateRolled) {
+		this.dateRolled = dateRolled;
 	}
 	
 }

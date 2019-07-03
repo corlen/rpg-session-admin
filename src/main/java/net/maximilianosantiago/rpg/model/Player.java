@@ -5,6 +5,8 @@ public class Player {
 	Long id;
 	String name;
 	
+	public Player() { }
+	
 	public Player(Long id, String name) {
 		this.id = id;
 		this.name = name;
