@@ -1,7 +1,15 @@
 package net.maximilianosantiago.rpg.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Roll {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	Long id;
 	Integer dieFace;
 	Integer quantity;
@@ -9,7 +17,7 @@ public class Roll {
 	Long playerId;
 	Long sessionId;
 	Integer sum;
-	Long dateRolled;
+	Long rollDate;
 	
 	public Roll() { }
 	
@@ -22,7 +30,7 @@ public class Roll {
 		this.playerId = playerId;
 		this.sessionId = sessionId;
 		this.sum = sum;
-		this.dateRolled = dateRolled;
+		this.rollDate = dateRolled;
 	}
 	
 	public Long getId() {
@@ -68,10 +76,10 @@ public class Roll {
 		this.sum = sum;
 	}
 	public Long getDateRolled() {
-		return dateRolled;
+		return rollDate;
 	}
 	public void setDateRolled(Long dateRolled) {
-		this.dateRolled = dateRolled;
+		this.rollDate = dateRolled;
 	}
 	
 }

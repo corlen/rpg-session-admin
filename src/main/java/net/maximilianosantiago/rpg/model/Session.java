@@ -1,16 +1,22 @@
 package net.maximilianosantiago.rpg.model;
 
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Session {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	Long id;
 	String description;
-	Date createdDate;
+	Long createdDate;
 	
 	public Session() { }
 	
-	public Session(Long id, String description, Date createdDate) {
+	public Session(Long id, String description, Long createdDate) {
 		this.id = id;
 		this.description = description;
 		this.createdDate = createdDate;
@@ -32,11 +38,11 @@ public class Session {
 		this.description = description;
 	}
 
-	public Date getCreatedDate() {
+	public Long getCreatedDate() {
 		return createdDate;
 	}
 
-	public void setCreatedDate(Date createdDate) {
+	public void setCreatedDate(Long createdDate) {
 		this.createdDate = createdDate;
 	}
 }
