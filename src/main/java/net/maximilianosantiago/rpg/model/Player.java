@@ -5,12 +5,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 public class Player {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	Long id;
+	@NotEmpty(message = "Please provide a name")
 	String name;
 	
 	public Player() { }
