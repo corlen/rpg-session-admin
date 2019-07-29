@@ -17,12 +17,15 @@ public class Roll {
 	Long playerId;
 	Long sessionId;
 	Integer sum;
-	Long rollDate;
+	Long rolledDate;
+	Integer[] rolledDice;
+	Integer maxValue;
+	Integer minValue;
 	
 	public Roll() { }
 	
 	public Roll(Long id, Integer dieFace, Integer quantity, Integer bonusIncrement, Long playerId, Long sessionId,
-			Integer sum, Long dateRolled) {
+			Integer sum, Long rolledDate, Integer[] rolledDice, Integer maxValue, Integer minValue) {
 		this.id = id;
 		this.dieFace = dieFace;
 		this.quantity = quantity;
@@ -30,7 +33,10 @@ public class Roll {
 		this.playerId = playerId;
 		this.sessionId = sessionId;
 		this.sum = sum;
-		this.rollDate = dateRolled;
+		this.rolledDate = rolledDate;
+		this.rolledDice = rolledDice;
+		this.maxValue = maxValue;
+		this.minValue = minValue;
 	}
 	
 	public Long getId() {
@@ -75,11 +81,36 @@ public class Roll {
 	public void setSum(Integer sum) {
 		this.sum = sum;
 	}
-	public Long getDateRolled() {
-		return rollDate;
+	public Integer[] getRolledDice() {
+		return rolledDice;
 	}
-	public void setDateRolled(Long dateRolled) {
-		this.rollDate = dateRolled;
+
+	public void setRolledDice(Integer[] rolledDice) {
+		this.rolledDice = rolledDice;
+	}
+
+	public Integer getMaxValue() {
+		return maxValue;
+	}
+
+	public void setMaxValue(Integer maxValue) {
+		this.maxValue = maxValue;
+	}
+
+	public Integer getMinValue() {
+		return minValue;
+	}
+
+	public void setMinValue(Integer minValue) {
+		this.minValue = minValue;
+	}
+
+	public Long getRolledDate() {
+		return rolledDate;
+	}
+
+	public void setRolledDate(Long rolledDate) {
+		this.rolledDate = rolledDate;
 	}
 	
 }

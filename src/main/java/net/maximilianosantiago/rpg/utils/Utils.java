@@ -5,10 +5,13 @@ import java.security.SecureRandom;
 public class Utils {
 	
 	public static Integer rollDice(Integer face) {
-		SecureRandom sr = new SecureRandom();
-		return sr.nextInt(face)+1;
+		Integer result = 0;
+		SecureRandom randomRolls = new SecureRandom();
+		result += randomRolls.nextInt(face)+1;
+		result += randomRolls.nextInt(face)+1;
+		result += randomRolls.nextInt(face)+1;
+		result += randomRolls.nextInt(face)+1;
+		return result/4;
 	}
-	
-	
 	
 }
