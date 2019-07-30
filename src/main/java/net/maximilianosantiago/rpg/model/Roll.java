@@ -13,7 +13,7 @@ public class Roll {
 	Long id;
 	Integer dieFace;
 	Integer quantity;
-	Integer bonusIncrement;
+	Integer bonusIncrement = 0;
 	Long playerId;
 	Long sessionId;
 	Integer sum;
